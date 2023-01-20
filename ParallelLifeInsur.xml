@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="5"   parallel="tests" name="Suite">
+  <test name="Test-Runner1">
+    <classes>
+      <class name="project_life_insurance.AddPaymentUsingAnnotationTest"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test  name="Test-Runner2">
+    <classes>
+      <class name="project_life_insurance.EditPaymentUsingAnnotationTest"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test  name="Test-Runner3">
+    <classes>
+      <class name="project_life_insurance.DeletePaymentUsingAnnotationTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

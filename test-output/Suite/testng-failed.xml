@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="tests" name="Test-Runner3(failed)">
+    <classes>
+      <class name="project_life_insurance.DeletePaymentUsingAnnotationTest">
+        <methods>
+          <include name="configBC"/>
+          <include name="configDB"/>
+          <include name="configBM"/>
+          <include name="configAC"/>
+          <include name="deletePayment"/>
+          <include name="disconnectDB"/>
+          <include name="configAM"/>
+        </methods>
+      </class> <!-- project_life_insurance.DeletePaymentUsingAnnotationTest -->
+    </classes>
+  </test> <!-- Test-Runner3(failed) -->
+</suite> <!-- Failed suite [Suite] -->
