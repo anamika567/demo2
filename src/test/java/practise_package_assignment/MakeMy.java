@@ -19,23 +19,26 @@ public class MakeMy {
 			driver.get("https://www.makemytrip.com/");
 			
 			Actions act=new Actions(driver);
-			Thread.sleep(2000);
-
 			act.moveByOffset(10, 10).click().perform();
-			Thread.sleep(2000);
-
-			act.moveByOffset(10, 10).click().perform();
-
-			
-			//WebElement e = driver.findElement(By.xpath("//a[@id='webklipper-publisher-widget-container-notification-close-div']"));
-			//act.moveToElement(e).click().perform();
-			
+			driver.findElement(By.xpath("//span[text()='DEPARTURE']")).click();
+					
 			String tday="Sat";
 			String tmonth="Feb";
 			String tdate="04";
 			String tyear="2023";
 			String traveldate=tday+" "+tmonth+" "+tdate+" "+tyear;
-			driver.findElement(By.xpath("//div[@aria-label='"+traveldate+"']")).click();
+			
+	
+			for(;;)
+			{
+				try {
+					driver.findElement(By.xpath("//div[@aria-label='"+traveldate+"']")).click();
+					break;
+				}
+				catch(Exception e) {
+					driver.findElement(By.xpath("//span[@aria-label='Next Month']")).click();
+				}
+			}
 			
 			driver.findElement(By.xpath("//a[.='Search']")).click();
 			

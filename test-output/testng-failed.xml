@@ -10,11 +10,9 @@
           <include name="configBM"/>
           <include name="configAC"/>
           <include name="simple"/>
-          <include name="simple5"/>
           <include name="disconnectDB"/>
           <include name="addPayment"/>
           <include name="simple2"/>
-          <include name="simple4"/>
           <include name="simple3"/>
           <include name="configAM"/>
         </methods>

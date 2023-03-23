@@ -35,17 +35,24 @@ public class Spicejet {
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//div[@data-testid='departure-date-dropdown-label-test-id']")).click();
 		
-		String tday="Sat";
-		String tmonth="Jan";
-		String tdate="14";
+		String tday="Fri";
+		String tdate="17";
+		String tmonth="March ";
 		String tyear="2023";
 		String traveldate=tday+" "+tdate+" "+tmonth+" "+tyear;
+		for(;;)
+		{
+			try {
+				driver.findElement(By.xpath("//div[text()='"+tmonth+"' and text()='"+tyear+"']")).click();
+				break;
+			}
+			catch(Exception e) {
+				driver.findElement(By.xpath("//div[@class='css-1dbjc4n r-1loqt21 r-u8s1d r-11xbo3g r-1v2oles r-1otgn73 r-16zfatd r-eafdt9 r-1i6wzkk r-lrvibr r-184en5c']")).click();
+			}
+		}
 		
-		driver.findElement(By.xpath("//div[@class = 'css-76zvg2 css-bfa6kz r-homxoj r-ubezar']")).sendKeys("traveldate");
 		
-		
-		
-	/*	*/		
+			
 	}
 
 }

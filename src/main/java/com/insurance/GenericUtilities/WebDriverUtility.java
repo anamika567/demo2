@@ -50,7 +50,7 @@ public class WebDriverUtility {
 	
 	public void elementToBeVisible(WebDriver driver,WebElement element)
 	{
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(10000));
+		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.visibilityOf(element));
 		
 	}
@@ -291,6 +291,7 @@ public class WebDriverUtility {
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
 		int y = element.getLocation().getY();
 		jse.executeScript("window.scrollBy(0,"+y+")", element);
+		
 		//jse.executeScript("argument[0].scrollIntoView()", element);
 	}
 	
