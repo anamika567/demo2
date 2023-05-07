@@ -6,17 +6,21 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class Redbus {
 
 	public static void main(String[] args) throws Throwable {
 		
-		WebDriver driver=new ChromeDriver();
+		ChromeOptions option=new ChromeOptions();
+		option.addArguments("--disable-notifications");
+		
+		WebDriver driver=new ChromeDriver(option);
 		driver.get("https://www.redbus.com/");
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//button[text()='Accept All']")).click();
+		//driver.findElement(By.xpath("//button[text()='Accept All']")).click();
 		
 		driver.findElement(By.xpath("//label[text()='source']")).click();
 		

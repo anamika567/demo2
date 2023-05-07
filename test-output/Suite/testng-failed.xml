@@ -1,8 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" parallel="tests" name="Test-Runner3(failed)">
+<suite thread-count="2" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="tests" name="Test(failed)">
     <classes>
+      <class name="project_life_insurance.AddPaymentUsingAnnotationTest">
+        <methods>
+          <include name="configBC"/>
+          <include name="configDB"/>
+          <include name="configBM"/>
+          <include name="configAC"/>
+          <include name="simple"/>
+          <include name="disconnectDB"/>
+          <include name="addPayment"/>
+          <include name="simple2"/>
+          <include name="configAM"/>
+        </methods>
+      </class> <!-- project_life_insurance.AddPaymentUsingAnnotationTest -->
+      <class name="project_life_insurance.EditPaymentUsingAnnotationTest">
+        <methods>
+          <include name="configBC"/>
+          <include name="configDB"/>
+          <include name="configBM"/>
+          <include name="configAC"/>
+          <include name="disconnectDB"/>
+          <include name="simple"/>
+          <include name="editPayment"/>
+          <include name="configAM"/>
+        </methods>
+      </class> <!-- project_life_insurance.EditPaymentUsingAnnotationTest -->
       <class name="project_life_insurance.DeletePaymentUsingAnnotationTest">
         <methods>
           <include name="configBC"/>
@@ -15,5 +40,5 @@
         </methods>
       </class> <!-- project_life_insurance.DeletePaymentUsingAnnotationTest -->
     </classes>
-  </test> <!-- Test-Runner3(failed) -->
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

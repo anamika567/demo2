@@ -11,7 +11,7 @@ import org.openqa.selenium.interactions.Actions;
 
 public class MakeMy {
 
-		public static void main(String[] args) throws Throwable {
+		public static void main(String[] args) {
 			
 			WebDriver driver=new ChromeDriver();
 			driver.manage().window().maximize();
@@ -20,11 +20,13 @@ public class MakeMy {
 			
 			Actions act=new Actions(driver);
 			act.moveByOffset(10, 10).click().perform();
-			driver.findElement(By.xpath("//span[text()='DEPARTURE']")).click();
+			
+			driver.findElement(By.xpath("//span[text()='Departure']")).click();
 					
-			String tday="Sat";
-			String tmonth="Feb";
-			String tdate="04";
+			
+			String tday="fri";
+			String tmonth="May";
+			String tdate="05";
 			String tyear="2023";
 			String traveldate=tday+" "+tmonth+" "+tdate+" "+tyear;
 			
@@ -41,7 +43,7 @@ public class MakeMy {
 			}
 			
 			driver.findElement(By.xpath("//a[.='Search']")).click();
-			
+			driver.close();
 			
 					}		
 

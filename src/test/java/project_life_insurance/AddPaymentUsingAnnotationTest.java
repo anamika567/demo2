@@ -64,15 +64,11 @@ public class AddPaymentUsingAnnotationTest extends BaseClass {
 		System.out.println("ts");
 	}
 	
+	
 	@Test
 	public void simple2() {
 		System.out.println("ts");
 	}
-	@Test
-	public void simple3() {
-		System.out.println("ts");
-	}
-	
 	
 
 }

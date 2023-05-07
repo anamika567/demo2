@@ -1,6 +1,7 @@
 package project_life_insurance;
 
 import org.openqa.selenium.By;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.insurance.GenericUtilities.BaseClass;
@@ -27,7 +28,8 @@ public class EditPaymentUsingAnnotationTest extends BaseClass{
 			HomePage hp=new HomePage(driver);
 			hp.getPaymentsLink().click();
 			
-			
+			//Assert.fail();
+
 			// step 3: click on Edit payment tab
 
 			EditPaymentPage ed=new EditPaymentPage(driver);
@@ -49,5 +51,8 @@ public class EditPaymentUsingAnnotationTest extends BaseClass{
 	        
 		}
 
-
+	@Test
+	public void simple() {
+		System.out.println("ts1");
+	}
 }
