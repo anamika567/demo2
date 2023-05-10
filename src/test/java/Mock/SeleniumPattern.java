@@ -17,11 +17,11 @@ public class SeleniumPattern {
 		char ch[]=s.toCharArray();
 		int row=8;
 		int value=1;
-		for(int i=1;i<=row;i++)
+		for(int i=0;i<row;i++)
 		{
 			for(int j=0;j<value;j++)
 			{
-				System.out.print(s.charAt(j)+" ");
+				System.out.print(ch[j]+" ");
 			}
 			System.out.println();
 			value++;

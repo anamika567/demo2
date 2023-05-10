@@ -1,6 +1,6 @@
 package practise_package_assignment;
 
-public class GetAlphabate {
+public class GetAlphabateAndCount {
 
 	public static void main(String[] args) {
 
