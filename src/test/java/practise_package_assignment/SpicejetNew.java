@@ -24,14 +24,16 @@ public class SpicejetNew {
 		driver.findElement(By.xpath("//div[text()='From']/parent::div/descendant::input")).sendKeys("DEL");
 		
 		driver.findElement(By.xpath("//div[text()='To']/parent::div/descendant::input")).sendKeys("BLR");
-		driver.findElement(By.xpath("//div[text()='Bengaluru']")).click();
+		//driver.findElement(By.xpath("//div[text()='Bengaluru']")).click();
 		
 		Thread.sleep(3000);
 		
 		JavascriptExecutor j= (JavascriptExecutor) driver;
-		j.executeScript("window.scrollBy(0,200)");
-
-		driver.findElement(By.xpath("//div[@data-testid='undefined-month-April-2023']/descendant::div[text()='25']")).click();
+		j.executeScript("window.scrollBy(0,300)");
+		
+		Thread.sleep(2000);
+		 driver.findElement(By.xpath("//div[text()='May ' and text()='2023']/ancestor::div[contains(@data-testid,'undefined-month')]/descendant::div[text()='29']")).click();
+		//driver.findElement(By.xpath("//div[@data-testid='undefined-month-May-2023']/descendant::div[text()='29']")).click();
 		driver.findElement(By.xpath("//div[@data-testid='home-page-travellers']")).click();
 		driver.findElement(By.xpath("//div[@data-testid='Adult-testID-plus-one-cta']")).click();
 		

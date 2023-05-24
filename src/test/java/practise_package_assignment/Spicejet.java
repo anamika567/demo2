@@ -3,6 +3,7 @@ package practise_package_assignment;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,7 +12,7 @@ import org.openqa.selenium.interactions.Actions;
 
 public class Spicejet {
 	
-	public static void main(String[] args) throws Throwable {
+	public static void main(String[] args) throws InterruptedException {
 		ChromeOptions option=new ChromeOptions();
 		option.addArguments("--disable-notifications");
 		WebDriver driver=new ChromeDriver(option);
@@ -32,22 +33,34 @@ public class Spicejet {
 		to.clear();
 		to.sendKeys(tocity);
 		
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("//div[@data-testid='departure-date-dropdown-label-test-id']")).click();
+		JavascriptExecutor j= (JavascriptExecutor) driver;
+		j.executeScript("window.scrollBy(0,200)");
 		
-		String tday="Fri";
-		String tdate="17";
-		String tmonth="March ";
+		//driver.findElement(By.xpath("//div[@data-testid='departure-date-dropdown-label-test-id']")).click();
+		
+		
+		
+		String tday="Tue,";
+		String tdate="30";
+		String tmonth="May ";
 		String tyear="2023";
 		String traveldate=tday+" "+tdate+" "+tmonth+" "+tyear;
 		for(;;)
 		{
 			try {
-				driver.findElement(By.xpath("//div[text()='"+tmonth+"' and text()='"+tyear+"']")).click();
+
+			    driver.findElement(By.xpath("//div[text()='August ' and text()='2023']/ancestor::div[contains(@data-testid,'undefined-month')]/descendant::div[text()='30']")).click();
+				
+
+		       //driver.findElement(By.xpath("//div[text()='"+tmonth+"' and text()='"+tyear+"']/ancestor::div[contains(@data-testid,'undefined-month')]/descendant::div[text()='"+tdate+"']")).click();
+
+
+				//driver.findElement(By.xpath("//div[text()='"+tday+"' and text()='"+tdate+"' and text()='"+tmonth+"' and text()='"+tyear+"']")).click();
 				break;
 			}
 			catch(Exception e) {
-				driver.findElement(By.xpath("//div[@class='css-1dbjc4n r-1loqt21 r-u8s1d r-11xbo3g r-1v2oles r-1otgn73 r-16zfatd r-eafdt9 r-1i6wzkk r-lrvibr r-184en5c']")).click();
+				Thread.sleep(2000);
+				driver.findElement(By.xpath("//*[local-name()='svg' and @data-testid='svg-img']/descendant::*[local-name()='g' and @fill='none' and @fill-rule='evenodd' and contains(@transform,'translate')]")).click();
 			}
 		}
 		
