@@ -33,7 +33,6 @@ public class MakeMyTrip_Bus_Test {
 		 
 		 driver.findElement(By.xpath("//button[@class='primaryBtn font24 latoBold widgetSearchBtn']")).click();
 		 
-		 driver.findElement(By.xpath("//img[@class='primoCloseIcon']")).click();
 		 
 		  List<WebElement> busName = driver.findElements(By.xpath("//span[@class='latoBlack font22 blackText appendRight15']"));
 		  
