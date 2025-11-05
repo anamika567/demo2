@@ -47,7 +47,7 @@ public class ListenerImplimentationClass implements ITestListener {
 		
 		String Failedscript = result.getMethod().getMethodName();
 		String FS=Failedscript+new JavaUtility().getSystemDateAndTimeInFormat();
-		EventFiringWebDriver edriver=new EventFiringWebDriver(BaseClass.sdriver);
+     	EventFiringWebDriver edriver=new EventFiringWebDriver(BaseClass.sdriver);
 		File src=edriver.getScreenshotAs(OutputType.FILE);
 		File path=new File("./Screenshot/"+FS+".png");
 		String filepath = path.getAbsolutePath();
