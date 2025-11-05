@@ -13,10 +13,9 @@ public class Program3 {
 			for(int j=st.length()-1;j>=0;j--)
 			{
 				rev=rev+st.charAt(j); 
-			}
+			}	
 		}
 		System.out.print(rev);
-
 
 	}
 

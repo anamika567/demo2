@@ -11,7 +11,6 @@ public class fibonacci {
 		int c;
 		for(int i=0;i<20;i++)
 		{
-
 		System.out.print(a+" ");
 		c=a+b;
 		a=b;

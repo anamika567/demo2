@@ -10,13 +10,12 @@ public class Program1 {
 
 		for(int i=ch.length-1;i>=0;i--)
 		{
-
+			
 		if(ch[i]>='a' && ch[i]<='z')
 		{
-		System.out.print(ch[i]);
-
+		 System.out.print(ch[i]);
 	    }
-}
+       }
 
 	}
 

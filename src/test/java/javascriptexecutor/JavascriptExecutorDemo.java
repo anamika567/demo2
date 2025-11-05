@@ -38,12 +38,12 @@ public class JavascriptExecutorDemo {
 		String title = JavaScriptUtil.getTitleByJS(driver);
 		System.out.println(title);
 		
-//		// click on element
-//		WebElement loginBtn = driver.findElement(By.xpath("/html/body/div/header/div/ul/li[1]/a/span"));
-//		JavaScriptUtil.clickElementByJS(loginBtn, driver);
-//		
-//		// generate alert
-//		JavaScriptUtil.generateAlert(driver, "you clicked on login button...");
+		// click on element
+		WebElement loginBtn = driver.findElement(By.xpath("/html/body/div/header/div/ul/li[1]/a/span"));
+		JavaScriptUtil.clickElementByJS(loginBtn, driver);
+		
+		// generate alert
+		JavaScriptUtil.generateAlert(driver, "you clicked on login button...");
 //		
 //		// refresh browser
 //

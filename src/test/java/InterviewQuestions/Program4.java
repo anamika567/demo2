@@ -7,8 +7,9 @@ public class Program4 {
 
 		String s="my name is xyz";
 		String st[]=s.split(" ");
+		
 		System.out.print(st[0]+" ");
-		for(int i=1;i<=st.length-1;i++)
+		for(int i=0;i<=st.length-1;i++)
 		{
 			String s1=st[i];
 			for(int j=s1.length()-1;j>=0;j--)
@@ -17,8 +18,6 @@ public class Program4 {
 			}
 			System.out.print(" ");
 		}
-
-
 	}
 
 }

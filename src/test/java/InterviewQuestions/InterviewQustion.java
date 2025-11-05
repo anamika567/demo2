@@ -18,17 +18,24 @@ public class InterviewQustion {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 		driver.get("https://www.google.com/");
-		driver.findElement(By.name("q")).sendKeys("Anamika");
+		driver.findElement(By.name("q")).sendKeys("java");
 		ArrayList<String> list=new ArrayList<String>();
-		List<WebElement> name = driver.findElements(By.xpath("//div[@class='erkvQe']/descendant::span[contains(text(),'Anamika')]"));
-		WebElement third = driver.findElement(By.xpath("(//div[@class='erkvQe']/descendant::span[contains(text(),'Anamika')])[3]"));
-		System.out.println(third);
+		List<WebElement> name = driver.findElements(By.xpath("//span[contains(text(),'java')]"));
+		int count=name.size();
+		System.out.println(count);
 		
-		for(int i=0;i<name.size();i++)
+		System.out.println("***********");
+		System.out.println(name.get(count-8).getText());
+		System.out.println("***********");
+		
+		for(int i=0;i<count;i++)
 	    {
 	    	String text = name.get(i).getText();
 	    	System.out.println(text);
+	    	list.add(text);
 	    }
+		
+	System.out.println("-----------------------------");
 	Collections.sort(list);
 	for(String ob:list)
 	{

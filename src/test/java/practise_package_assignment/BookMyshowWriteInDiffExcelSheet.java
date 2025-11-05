@@ -24,7 +24,7 @@ public class BookMyshowWriteInDiffExcelSheet {
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 		driver.get("https://in.bookmyshow.com/explore/home/bengaluru");
 		driver.findElement(By.xpath("//img[@alt='Kabzaa']")).click();
-		driver.findElement(By.xpath("(//span[text()='Book tickets'])[1]")).click();
+		driver.findElement(By.xpath("(//(span[text()='Book tickets'])[1]")).click();
 		driver.findElement(By.xpath("(//span[.='2D'])[1]")).click();
 		driver.findElement(By.id("wzrk-cancel")).click();
 		

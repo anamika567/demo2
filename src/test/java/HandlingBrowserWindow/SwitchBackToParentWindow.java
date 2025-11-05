@@ -34,7 +34,7 @@ public class SwitchBackToParentWindow {
         }    
   
         //  Switch back to the main window which is the parent window.
-        driver.switchTo().window(mainwindow);
+         driver.switchTo().window(mainwindow);
         driver.quit();
     
 	}

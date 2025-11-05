@@ -37,7 +37,6 @@ public class BookMyShow {
 		System.out.println(n);
 		for(int i=0;i<element.size();i++)
 		{
-			
 			String text=element.get(i).getText();
 			System.out.println(text);
 			

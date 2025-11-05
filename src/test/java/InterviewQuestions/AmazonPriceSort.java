@@ -30,8 +30,7 @@ public class AmazonPriceSort {
 		for(int i=0;i<price.size();i++)
 		{
 			String text = price.get(i).getText();
-			list.add(text);
-			
+			list.add(text);	
 		}
 		
 		Collections.sort(list);
